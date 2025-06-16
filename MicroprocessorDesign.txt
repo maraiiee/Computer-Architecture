@@ -208,7 +208,7 @@ Types of ISAs
 
     Downside: Complex instructions are harder to implement in hardware and often slow.
 
-    🖥️ Examples: Intel x86, Motorola 68k.
+    Examples: Intel x86, Motorola 68k.
 
  RISC (Reduced Instruction Set Computer)
 
