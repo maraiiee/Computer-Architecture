@@ -1,0 +1,562 @@
+LINK: https://en.wikibooks.org/wiki/The_Computer_Revolution
+
+ Binary System and Data Representation
+
+    Binary (Base 2): Used by computers because it matches the on/off (1/0) nature of electrical circuits.
+
+    Decimal vs Binary:
+
+        Decimal (Base 10): Uses digits 0–9, with each position representing a power of 10.
+
+        Binary: Uses only 0 and 1, with positions representing powers of 2.
+
+        Example: 3687 (decimal) = 0b111001100111 (binary) = sum of various powers of 2.
+
+    Bit: Short for binary digit. Smallest unit of data, either 0 or 1.
+
+    Byte: 8 bits. Can represent 256 values; enough to store a single text character.
+
+    Data Sizes:
+
+        1 Kilobyte (KB) = 1024 bytes (2¹⁰)
+
+        1 Megabyte (MB) = 1024 KB = ~1 million bytes
+
+        1 Gigabyte (GB) = 1024 MB = ~1 billion bytes
+
+        1 Terabyte (TB) = 1024 GB = ~1 trillion bytes
+
+        1 Petabyte (PB) = 1024 TB
+
+        1 Exabyte (EB) = 1024 PB = ~1 quintillion bytes
+
+Digital Data & Text Encoding
+
+    Binary Code: The basic language of computers; represents all instructions and data.
+
+    Text Representations:
+
+        ASCII and EBCDIC: Use fixed sets of bits, mostly for English characters.
+
+        Unicode: Encodes characters from all writing systems, uses 1–4 bytes per character, supports 1+ million characters.
+
+        Unicode is now standard for web applications and programming languages like Java and Python.
+
+Computer Hardware: Motherboard
+
+    Motherboard: Central circuit board of the computer; connects and coordinates all components.
+
+        Referred to as the heart or central system of a computer.
+
+        Sends electrical signals to control components.
+
+    Key Components on/Connected to the Motherboard:
+
+        CPU (Central Processing Unit): Brain of the computer, processes data and controls tasks.
+
+        Cache Memory: Fast memory near CPU, stores frequently used data.
+
+        RAM (DRAM slots): Temporary memory for running programs.
+
+        Ports (USB, PCI): Used to connect peripherals like keyboard, mouse, flash drives.
+
+    Northbridge/Southbridge Chips:
+
+        Northbridge (or Memory Controller Hub): Handles communication with RAM and CPU.
+
+        Southbridge (I/O Controller Hub): Manages input/output functions.
+
+Microprocessor
+
+    Microprocessor: A miniaturized electronic circuit that acts as the CPU.
+
+        Converts input into output through machine language instructions.
+
+        Fundamental to modern computing devices like PCs, phones, and embedded systems.
+
+    Characteristics:
+
+        Controls logic in digital devices.
+
+        Varies in instruction set, clock speed, and bandwidth.
+
+        Vital to circuit board design and computer function.
+
+    Examples of Microprocessor Brands:
+
+        Intel Core
+
+        AMD Ryzen
+
+        Qualcomm Snapdragon
+
+        Apple M-series
+
+Workstations
+
+    Workstation Computer:
+
+        High-end personal computer used for scientific, engineering, and design tasks.
+
+        Offers high processing power, graphical capability, and accuracy.
+
+        Used by professionals needing precision and reliability.
+
+ 1. CPU (Central Processing Unit)
+
+    CPU = Central Processing Unit: Acts as the brain of the computer.
+
+    Primary role: Executes instructions, processes data, and controls other hardware.
+
+    Modern CPUs:
+
+        Delegate tasks (e.g., graphics) to specialized processors.
+
+        Supercomputers can have 100,000+ CPUs.
+
+    Also known as: Microprocessor or simply Processor.
+
+    Manufacturers: Primarily Intel and AMD.
+
+        Intel Core and AMD Ryzen are dominant in desktops/laptops.
+
+    Multi-core CPUs:
+
+        Allow multitasking (e.g., watch videos + browse internet).
+
+        Improve performance while reducing heat.
+
+ 2. Servers
+
+    Definition: A server is a computer that responds to requests from other computers.
+
+    Function: Powers nearly all online activity (web pages, emails, gaming, etc.).
+
+    How it works:
+
+        User requests web address → translated into IP → directs to specific server.
+
+    Types of Servers:
+
+        Web server, file server, database server, application server, printer server, etc.
+
+    Any computer can be a server if:
+
+        It has a fast processor and sufficient storage.
+
+    Enterprise Use:
+
+        Large companies often need multiple servers for reliability and performance.
+
+    Security Risks:
+
+        Must be protected with antivirus and secure access controls.
+
+    Form factors: Often rack-mounted or blade servers for space efficiency.
+
+3. Price and Upgrades
+
+    Rapid obsolescence: Technology evolves fast; a new $3500 PC can be outdated in a week.
+
+    Depreciation: Computers lose value quickly after release.
+
+    Buying Tips:
+
+        Consider buying from "Computer Depot" for better prices on slightly older models.
+
+    Modularity:
+
+        Computers are upgradeable: processors, graphics cards, monitors, etc.
+
+        Common upgrade reasons:
+
+            Gamers: video cards, DACs.
+
+            Professionals: more storage, faster processors.
+
+    Industry impact:
+
+        Upgrade culture supports billion-dollar companies (Intel, AMD, NVIDIA, etc.).
+
+4. Computer Case & Internal Components
+ Power Supply Unit (PSU)
+
+    Converts wall power (AC) into usable DC voltages.
+
+    Types:
+
+        AT, ATX, ATX-2 (newest and most common).
+
+ Bays
+
+    Openings for installing drives (HDDs, CD/DVD drives).
+
+    Can be internal or external (accessible from outside the case).
+
+Optical Discs
+
+    CD-ROM: Originally for music, adapted for data/software.
+
+    Enhanced CDs: Contain both audio and data.
+
+    Other formats:
+
+        DVD, Blu-ray.
+
+    Standards:
+
+        ISO 9660 (standard filesystem).
+
+        El Torito (bootable CDs).
+
+        UDF for rewriteable media (CD-RW, DVD-RW).
+
+ 5. Motherboard & Storage Components
+ Motherboard
+
+    Central hub of the computer—connects CPU, RAM, ROM, storage, and peripherals.
+
+    Often compared to the central nervous system of the body.
+
+ Key Components on the Motherboard:
+
+    CPU (Microprocessor):
+
+        Processes user commands and system tasks.
+
+        Major brands: Intel, IBM, Apple.
+
+    RAM (Random Access Memory):
+
+        Temporary memory; faster access but data is lost if power fails.
+
+        Must save work frequently to avoid data loss.
+
+    ROM (Read Only Memory):
+
+        Stores essential, non-editable startup instructions.
+
+        Manufacturer-programmed.
+
+    Flash Memory:
+
+        Non-volatile, rewritable memory.
+
+        Used in USBs, cameras, phones, and start-up firmware.
+
+    Expansion Slots:
+
+        Allow additional cards (sound, video, network) to be added.
+
+ Types of Storage
+
+Primary Storage:
+
+    RAM (Random Access Memory):
+
+        Temporary, fast-access memory.
+
+        Connected to motherboard and video cards.
+
+        Data is lost when power is off.
+
+ Secondary Storage:
+
+    Permanent data storage.
+
+    Slower access than RAM.
+
+    Examples: Hard drives, CDs, flash drives, floppy disks.
+
+Analogy:
+
+    RAM = kitchen island (easy reach).
+
+    Secondary storage = pantry/fridge (permanent but requires effort to access).
+
+Storage Devices & Technologies
+
+ Floppy Disks (Obsolete):
+
+    Portable but fragile.
+
+    Sizes:
+
+        8-inch: earliest, low capacity.
+
+        5¼-inch: up to 1.2MB.
+
+        3½-inch: up to 1.44MB.
+
+    Easily damaged by handling.
+
+ Zip Drives:
+
+    Introduced by Iomega in 1994.
+
+    Capacities: 100MB → 250MB → 750MB.
+
+    Eventually replaced by flash and optical storage.
+
+ Hard Disk Drives (HDDs):
+
+    Non-volatile, magnetic storage.
+
+    Consist of platters, heads, spindle, actuator arm.
+
+    Data stored magnetically.
+
+    Used in RAID, NAS, SAN.
+
+    Sizes:
+
+        Desktop: 2.5" or 3.5".
+
+        Portable: 1.5" or smaller.
+
+    RAID setups help prevent data loss.
+
+ RAID (Redundant Array of Independent Disks):
+
+    Combines multiple drives for performance or redundancy.
+
+    RAID 0: Striping (increased speed).
+
+    RAID 1: Mirroring (backup copy).
+
+    RAID 5: Striping with parity for data recovery; needs 3+ drives.
+
+    Used in enterprise and data centers.
+
+ Solid State Drives (SSD):
+
+    Flash memory, no moving parts.
+
+    Faster, quieter, and more durable than HDDs.
+
+    Typically smaller capacities (64–256GB).
+
+    Becoming mainstream in laptops/netbooks.
+
+External Hard Drives:
+
+    USB powered.
+
+    Useful for backup and portability.
+
+    Magnetic HDDs up to 1TB+, SSDs up to 128GB+.
+
+ Hybrid Drives (SSHD):
+
+    Combine HDD (capacity) with SSD (speed).
+
+    Suitable for power users.
+
+ Removable Storage & Flash Memory
+
+ USB Flash Drives / USB Keys:
+
+    Portable, rewritable.
+
+    Connect via USB ports.
+
+    Capacities: 1GB to 64GB (USB drives), up to 4GB (USB keys).
+
+    Safer and more durable than floppy/zip.
+
+    Widely used in education, business, and for quick file transfers.
+
+ Flash Memory Types:
+
+    Flash Cards – Inserted in cameras, mobile devices.
+
+    Flash Sticks – More storage, for PCs, cameras.
+
+    Flash Drives – USB-based, up to 2GB+.
+
+ Tape Drives:
+
+    Sequential data storage.
+
+    Still used for cheap backups of large data sets.
+
+    Began in 1949 (IBM), used widely till 1990s.
+
+Smart Cards
+
+    Pocket-sized with embedded chip.
+
+    Used in:
+
+        Banking, ID, SIM cards, transit passes.
+
+    Can store biometric data.
+
+    Inserted into or tapped near a card reader for use.
+
+ Modern Storage Technologies☁️ Cloud Storage:
+
+    Internet-accessed storage.
+
+    Accessible from any device with login.
+
+    Useful for backups and collaboration.
+
+Deployment Types:
+
+    Public Cloud: Available to anyone.
+
+    Private Cloud: Internal to an organization.
+
+    Community Cloud: Shared by related organizations.
+
+    Hybrid Cloud: Mix of the above with shared functions.
+
+ Online Secondary Storage:
+
+    Used for disaster recovery (fire, theft, virus).
+
+    Examples: Driveway, Magical Desk, Backup.com.
+
+Holographic Storage
+
+    Uses 3D light-based recording.
+
+    Fast and high-capacity.
+
+    One light flash = over 1 million bits.
+
+    Data stored in layers, not surface tracks.
+
+    Technology still in early stages but promising.
+
+ Data Backup & Recovery
+
+Backup:
+
+    Copy of data saved to avoid loss.
+
+    Methods:
+
+        Cloud storage
+
+        External hard drives
+
+        Tape backups
+
+Data Recovery:
+
+    Used when backup is missing or fails.
+
+    Recovery firms like SALVAGEDATA use clean rooms to retrieve files from damaged drives.
+
+
+1. Computer Graphics
+Definition:
+
+    Anything visually displayed on a computer: pictures, videos, illustrations, icons, etc.
+
+    Created using digital imaging software (for painting, drawing, editing).
+
+Types of Graphic Software:
+
+    Painting:
+
+        Example: MS Paint (uses basic tools like pen/brush).
+
+    Drawing:
+
+        Example: Adobe Illustrator (uses vectors, layers, vector masks).
+
+        Applications: logos, art, business cards, website graphics.
+
+    Image Editing:
+
+        Example: Adobe Photoshop (used by professionals for photo manipulation and design).
+
+    GUI (Graphical User Interface):
+
+        Interface that allows users to interact with visual elements (e.g., buttons, icons, images on a webpage).
+
+2. Multimedia
+ Definition:
+
+    Any content that includes more than one type of media (e.g., audio + video).
+
+ Examples of Multimedia Software:
+
+    Audio/Video Editing:
+
+        Used to add soundtracks, effects, transitions.
+
+        Example: iMovie, Adobe Premiere.
+
+    Media Players:
+
+        Example: Windows Media Player, iTunes.
+
+    DVD Authoring & Burning Tools:
+
+        Example: Nero, used to create DVDs and MP3 discs.
+
+ Real-World Impact:
+
+    Multimedia is part of everyday life (music, videos, streaming, etc.).
+
+    Essential in entertainment, education, and communication.
+
+3. Increasing Graphic Design Speed (Corel Example)
+Tips for Speed & Efficiency:
+
+    Customize keyboard shortcuts:
+
+        “Q” for Wireframe mode (faster object selection).
+
+        “C”, “E”, “P”, “R”, “F” for alignments.
+
+    Use mouse scroll wheel for fast zooming in/out.
+
+    Drag + right-click to duplicate objects quickly.
+
+    CTRL + D duplicates object with same displacement.
+
+    Transformation tools: replicate objects by exact measurements (e.g., 0.25”).
+
+    CTRL + A: Select all.
+
+    Find and Replace: Swap colors efficiently.
+
+    Add frequent colors to custom palette to avoid repetitive selection.
+
+    Use artistic text instead of paragraph text to avoid frame issues.
+
+ 4. Design Efficiency Process
+ Pre-Design Methodology:
+
+    Set document size first (e.g., tri-panel brochure: guide at 3.67" and 7.4").
+
+    Dump all content in the workspace:
+
+        Logos, slogans, text, pictures (unformatted).
+
+    Set constraints:
+
+        Font choices, color scheme, printing limitations (bleed, spot/full color).
+
+    Format last:
+
+        Once content is visible, creatively design and organize.
+
+    Start with easy elements first to build creative momentum.
+
+Benefits:
+
+    Avoids issues during formatting.
+
+    Saves time and prevents layout redesign.
+
+    Keeps client requirements in mind from the start
+
+
+
+
