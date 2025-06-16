@@ -1,0 +1,461 @@
+ Microprocessor Basics 
+
+    City Analogy: The microprocessor is like a city. Trucks = data, Highways = buses, Warehouses = cache, Clock speed = delivery speed.
+
+Key Concepts:
+
+    Clock Speed: Measured in GHz; higher = faster, but has physical limits.
+
+    CPU Fabrication: Newer fabrication allows faster, smaller, safer circuits with more transistors.
+
+    Pipelining: Like using multiple trucks in stages to speed up deliveries (processing multiple instructions in parallel).
+
+    Multicore CPUs: Like adding more lanes; allows parallel processing.
+
+    32-bit vs. 64-bit: 64-bit can handle more memory and data per operation.
+
+    Cache: Stores frequently used data closer to the CPU for faster access (L1, L2, L3).
+
+ What Microprocessors Do
+
+    Main Functions:
+
+        Perform arithmetic
+
+        Move data
+
+        Make logical decisions
+
+    Found in:
+
+        Embedded systems (most common)
+
+        Desktop PCs
+
+        Servers and workstations
+
+Types of Processors
+
+    General Purpose: Found in desktops/laptops (Intel, AMD).
+
+    DSP (Digital Signal Processor): Designed for fast math (e.g., audio/video decoding).
+
+    Embedded Controllers (Microcontrollers): Include built-in memory, converters, timers.
+
+    Programmable State Machines: Minimal processors for very specific tasks.
+
+    GPUs (Graphics Processing Units): Handle parallel processing for graphics and video.
+
+Microprocessor Uses
+
+    Signal Processing: High-speed math (e.g., digital radio, TV).
+
+    Real-Time Systems: Tasks requiring quick responses (e.g., ABS brakes).
+
+    Routing/Throughput: Moving data efficiently (e.g., routers).
+
+    Sensor Monitoring: Reading/analyzing sensor data (e.g., engine systems).
+
+    General Computing: Everyday desktop/laptop usage.
+
+    Graphics: Handling visual processing (games, video editing).
+
+Layers of Abstraction in Computers
+
+    Applications
+
+    Operating System (OS)
+
+    Firmware
+
+    Instruction Set Architecture (ISA)
+
+    Microprocessor Control Logic
+
+    Physical Circuit Layout
+
+    This course focuses mainly on ISA and Control Logic.
+
+Instruction Set Architecture (ISA)
+
+    ISA = Assembly Language + Machine Code
+
+    Popular ISAs: ARM, x86, MIPS, SPARC, RISC-V
+
+Computer Architectures
+
+Von Neumann:
+
+    Shared memory for data and instructions
+
+    Used in modern desktop computers
+
+Harvard:
+
+    Separate memory for data and instructions
+
+    Found in microcontrollers and DSPs
+
+RISC vs. CISC
+
+    RISC (Reduced Instruction Set Computer):
+
+        Simple, fast instructions (e.g., MIPS, SPARC)
+
+    CISC (Complex Instruction Set Computer):
+
+        Rich, powerful instructions but can be slower (e.g., Intel x86)
+
+Core Microprocessor Components
+
+    Control Unit: Directs the data flow
+
+    ALU (Arithmetic Logic Unit): Does math/logic operations
+
+    Registers: Very fast memory locations inside the CPU
+
+        General-purpose: Used in programming
+
+        Microarchitectural: Used internally, not directly accessible
+
+    I/O Ports: Interface with memory and peripherals
+
+Cache (Fast Temporary Storage)
+
+    L1 Cache: Smallest, fastest
+
+    L2 Cache: Larger, slower than L1
+
+    L3 Cache: Larger still, slower than L2
+
+    Access speed hierarchy: Registers > Cache > RAM
+
+Endianness (Byte Order)
+
+    Little Endian: Least significant byte stored first (used in x86)
+
+    Big Endian: Most significant byte stored first (used in 68K)
+
+    Becomes important in networking or system compatibility.
+
+Stacks and Subroutines
+
+    Stack: LIFO structure used for temporary data and return addresses.
+
+    Used heavily in function calls and recursive programming.
+
+    Push: Add to top of stack
+
+    Pop: Remove from top of stack
+
+    Different architectures use different methods for handling subroutine calls with stacks or link registers.
+
+ Moore's Law
+
+    Transistor count on chips doubles ~every 18–24 months.
+
+    Does not mean CPU speed or power doubles.
+
+    Implications:
+
+        Faster, smaller chips
+
+        Lower cost per transistor
+
+        Heat and power usage rise as transistors shrink
+
+ Clock Speed and Instruction Execution
+
+    Clock Rate = Number of cycles per second (Hz)
+
+    Clock Time = 1 / Clock Rate
+
+    Instructions per cycle vary by CPU type.
+
+    Example:
+
+        1 MHz CPU → 1 microsecond per cycle
+
+        3.2 GHz CPU → 300 picoseconds per cycle
+
+ Basic Computer Elements
+
+    CPU – Processes data
+
+    Memory – Stores data
+
+    Input Devices – e.g., Keyboard, Mouse
+
+    Output Devices – e.g., Monitor, Printer
+
+
+ Instruction Set Architecture (ISA)
+
+What is ISA?
+
+    The set of basic machine instructions a CPU can execute.
+
+    It defines how software communicates with hardware.
+
+Types of ISAs
+ CISC (Complex Instruction Set Computer)
+
+    Older philosophy: Designed before compilers existed.
+
+    Includes complex instructions (like loops or string processing).
+
+    Easier for humans to program manually.
+
+    Downside: Complex instructions are harder to implement in hardware and often slow.
+
+    🖥️ Examples: Intel x86, Motorola 68k.
+
+ RISC (Reduced Instruction Set Computer)
+
+    Created in the 1970s to simplify hardware and improve speed.
+
+    Uses fewer, simpler instructions that are all roughly equal in execution time.
+
+    Better for compiler optimization and pipeline performance.
+
+    Examples: ARM, MIPS, SPARC, PowerPC.
+
+How Instructions Work
+
+    Instructions are stored in memory sequentially.
+
+    CPU fetches instruction via the Program Counter (PC) → stores it in Instruction Register (IR) → increments PC.
+
+    Most programs use:
+
+        Move, Load, Store: Transfer data between memory and registers.
+
+        Branch/Jump/Call/Return: Change execution flow.
+
+        Arithmetic: ALU-based operations (add, sub, AND, OR, XOR, shifts).
+
+        I/O Instructions: Communicate with external devices.
+
+        NOP (No Operation): Used for timing or hazard avoidance.
+
+ Instruction Length
+
+    Fixed-length (e.g., all 32-bit like MIPS): Easy for CPUs to decode.
+
+    Variable-length (e.g., x86): More compact, but harder to decode.
+
+    Design trade-offs:
+
+        Use longer instructions or reduce registers/operands.
+
+        Some CPUs (e.g., ARM Thumb) mix short and long instructions.
+
+        3-operand format (e.g., Ra = Rb op Rc) is more flexible but requires more instruction bits.
+
+Instruction Format
+
+    Instructions are divided into fields:
+
+        Opcode (what to do)
+
+        Source registers
+
+        Destination register
+
+        Immediate values or address
+
+    CPUs may have:
+
+        Single format (same structure for all instructions)
+
+        Multiple formats (MIPS: R-type, I-type, J-type, etc.)
+
+    Some CPUs are binary incompatible but still assembly/source compatible.
+
+ Memory Hierarchy in Microprocessors
+
+ Hierarchy Overview
+Memory Type	Speed	Size	Cost	Volatile?
+Registers	Fastest	Very small	High	Yes
+Cache (L1/L2/L3)	Very fast	Small	High	Yes
+RAM (DRAM/SRAM)	Fast	Medium	Moderate	Yes
+HDD/SSD	Slow	Very large	Low	No
+ RAM (Main Memory)
+
+    Volatile (data lost when power is off).
+
+    Stores active programs and data.
+
+    Two major types:
+
+        SRAM:
+
+            Uses 6 transistors per bit.
+
+            Fast but expensive and large → used in CPU cache.
+
+        DRAM:
+
+            Uses 1 transistor + 1 capacitor.
+
+            Denser and cheaper, but slower → used in main system RAM.
+
+            Must be refreshed regularly.
+
+            SDRAM is a popular DRAM variant.
+
+Cache Memory
+
+    Located closer to CPU, runs at CPU speed.
+
+    Multilevel (L1 = smallest/fastest, L3 = largest/slowest).
+
+    Reduces latency when accessing frequently used data.
+
+Secondary Memory (HDD/SSD)
+
+    Non-volatile.
+
+    Much slower than RAM or cache.
+
+    Data persists after shutdown.
+
+    HDDs have moving parts and degrade over time.
+
+    SSDs (using flash memory) are faster and more reliable.
+
+Core Components of a Microprocessor
+
+ Registers
+
+    Storage units made of flip-flops.
+
+    Store binary data (e.g., 32-bit register = 32 bits of storage).
+
+    Controlled by a clock (enable) signal:
+
+        When HIGH → stores incoming data.
+
+        When LOW → holds current data.
+
+ Register File
+
+    A collection of registers of equal size.
+
+    Takes:
+
+        Address (to select register),
+
+        Data (to write),
+
+        Enable (to confirm write).
+
+    A decoder routes the input to the correct register.
+
+Multiplexer (MUX)
+
+    An input selector.
+
+    Chooses 1 of many inputs based on control bits.
+
+    Example: A 3-bit control can select from 8 inputs (2³ = 8).
+
+ Decoder
+
+    Performs opposite of MUX.
+
+    Takes N-bit input and activates 1 of 2ⁿ outputs.
+
+    Example: Input = 10 (binary) → Output Line O2 becomes HIGH, rest are LOW.
+
+ Program Counter (PC)
+
+    Holds the address of the current instruction.
+
+    Updates each instruction cycle to point to the next instruction.
+
+    In RISC: PC += fixed instruction length (e.g., MIPS: +4 bytes).
+
+    In CISC: PC += variable instruction length determined by the decoder.
+
+ Updating the PC
+
+    Controlled by enable signals.
+
+    Depends on memory architecture:
+
+        Harvard: 1 machine word per address → increment by 1.
+
+        Von Neumann (byte-addressable): increment by instruction size in bytes.
+
+ Branching
+Non-Offset Branch (Jump)
+
+    PC is completely replaced by a new value from instruction or register.
+
+ Offset Branch
+
+    PC is modified by adding/subtracting a value (e.g., PC = PC + offset).
+
+    Useful for:
+
+        Relocatable code.
+
+        Compact instruction sets.
+
+        Relative jumps.
+
+ Combined Branching
+
+    Some systems support both absolute (far) and relative (near) branches.
+
+ Instruction Decoder
+ Function
+
+    Reads the instruction and generates appropriate control signals for execution.
+
+    Sends instruction parts to CPU components (ALU, memory, PC, etc.).
+
+ RISC Decoder
+
+    Simpler and faster.
+
+    Two types:
+
+        Direct: Bits directly control hardware.
+
+            No decoding delay.
+
+            Immediate hardware response.
+
+        Simple Decoder: Uses logic gates to clean up encoding.
+
+            Reduces instruction length.
+
+CISC Decoder
+
+    More complex due to variable-length instructions.
+
+    Uses a state machine and microprogram (microcode):
+
+        Opcode selects a sequence of control steps.
+
+        Often implemented as a control store ROM.
+
+        Each clock cycle fetches next micro-instruction from ROM.
+
+        A microPC drives which ROM row is read next.
+
+Pipeline Register
+
+    Captures control signals from the ROM every clock cycle.
+
+    Coordinates execution by moving through micro-instruction steps.
+
+ Why RISC over CISC?
+
+    Simplicity: RISC decoder is smaller and easier to design.
+
+    Speed: Less instruction decoding time.
+
+    Compiler-friendly: RISC offloads complexity to software.
